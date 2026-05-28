@@ -1,0 +1,470 @@
+/* ============================================
+   KARMINA LA CAPIBARA — Landing styles
+   Paleta cálida canon del canal Padre de Dos Soles
+   Mobile-first, accesible, sin frameworks
+   ============================================ */
+
+:root {
+  --bg: #FAF6EE;
+  --bg-soft: #F4ECE0;
+  --bg-warm: #EFE3CF;
+  --text: #2D2419;
+  --text-soft: #6B5D4F;
+  --accent: #B8602F;
+  --accent-dark: #8E4720;
+  --gold: #C89A3E;
+  --green: #5C7A5C;
+  --line: #E5D8C3;
+
+  --serif-title: 'Cormorant Garamond', Georgia, serif;
+  --serif-body: 'Lora', Georgia, serif;
+
+  --container: 680px;
+  --container-wide: 960px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--serif-body);
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.container-wide {
+  max-width: var(--container-wide);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ============================================
+   HERO
+   ============================================ */
+
+.hero {
+  background: linear-gradient(180deg, var(--bg-warm) 0%, var(--bg) 100%);
+  padding: 3rem 0 4rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-container {
+  max-width: var(--container-wide);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+@media (min-width: 760px) {
+  .hero-container {
+    grid-template-columns: 1fr 1.2fr;
+    gap: 3.5rem;
+  }
+  .hero {
+    padding: 5rem 0 6rem;
+  }
+}
+
+.hero-image {
+  text-align: center;
+}
+
+.hero-image img {
+  max-width: 320px;
+  margin: 0 auto;
+  border-radius: 6px;
+  box-shadow:
+    0 12px 32px rgba(45, 36, 25, 0.18),
+    0 4px 12px rgba(45, 36, 25, 0.10);
+}
+
+@media (min-width: 760px) {
+  .hero-image img {
+    max-width: 380px;
+  }
+}
+
+.hero-text .eyebrow {
+  font-family: var(--serif-body);
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.hero-text h1 {
+  font-family: var(--serif-title);
+  font-size: clamp(2.2rem, 6vw, 3.4rem);
+  line-height: 1.05;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.4rem;
+  letter-spacing: -0.01em;
+}
+
+.hero-text h2 {
+  font-family: var(--serif-title);
+  font-size: clamp(1.15rem, 2.6vw, 1.5rem);
+  font-weight: 500;
+  font-style: italic;
+  color: var(--text-soft);
+  margin-bottom: 1.5rem;
+}
+
+.tagline {
+  font-size: 1.08rem;
+  line-height: 1.65;
+  color: var(--text);
+  margin-bottom: 2rem;
+  max-width: 38em;
+}
+
+.hero-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  align-items: flex-start;
+}
+
+.status-badge {
+  display: inline-block;
+  background: var(--green);
+  color: #FFF;
+  padding: 0.55rem 1.1rem;
+  border-radius: 4px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  padding: 0.85rem 1.8rem;
+  font-family: var(--serif-body);
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #FFF;
+}
+
+.btn-primary:hover {
+  background: var(--accent-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(184, 96, 47, 0.25);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.btn-secondary:hover {
+  background: var(--accent);
+  color: #FFF;
+}
+
+/* ============================================
+   SECTIONS
+   ============================================ */
+
+main section {
+  padding: 3.5rem 0;
+}
+
+@media (min-width: 760px) {
+  main section {
+    padding: 5rem 0;
+  }
+}
+
+main section:nth-child(even) {
+  background: var(--bg-soft);
+}
+
+h3 {
+  font-family: var(--serif-title);
+  font-size: clamp(1.7rem, 4vw, 2.2rem);
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+/* ============================================
+   SINOPSIS
+   ============================================ */
+
+.sinopsis p {
+  font-size: 1.08rem;
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+  color: var(--text);
+}
+
+.sinopsis p:first-child::first-letter {
+  font-family: var(--serif-title);
+  font-size: 3.6rem;
+  font-weight: 600;
+  float: left;
+  line-height: 0.9;
+  padding-right: 0.6rem;
+  padding-top: 0.4rem;
+  color: var(--accent);
+}
+
+.sinopsis p em {
+  font-style: italic;
+  color: var(--accent-dark);
+  font-weight: 500;
+}
+
+.sinopsis .closing {
+  font-style: italic;
+  color: var(--text-soft);
+  border-left: 3px solid var(--gold);
+  padding-left: 1.2rem;
+  margin-top: 2rem;
+  font-size: 1.05rem;
+}
+
+/* ============================================
+   INCLUYE
+   ============================================ */
+
+.incluye ul {
+  list-style: none;
+  padding: 0;
+}
+
+.incluye li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.incluye li::before {
+  content: '✦';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--gold);
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.incluye li strong {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.incluye li em {
+  font-style: italic;
+  color: var(--accent-dark);
+}
+
+/* ============================================
+   GALERIA
+   ============================================ */
+
+.galeria-intro {
+  text-align: center;
+  color: var(--text-soft);
+  font-style: italic;
+  margin-bottom: 2.5rem;
+  margin-top: -0.5rem;
+}
+
+.galeria h3 {
+  text-align: center;
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 600px) {
+  .galeria-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.galeria-grid figure {
+  margin: 0;
+}
+
+.galeria-grid img {
+  width: 100%;
+  border-radius: 4px;
+  box-shadow:
+    0 8px 24px rgba(45, 36, 25, 0.14),
+    0 3px 8px rgba(45, 36, 25, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.galeria-grid figure:hover img {
+  transform: translateY(-3px);
+}
+
+.galeria-grid figcaption {
+  text-align: center;
+  font-family: var(--serif-title);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--text-soft);
+  margin-top: 0.8rem;
+}
+
+/* ============================================
+   PRECIO
+   ============================================ */
+
+.precio {
+  text-align: center;
+}
+
+.precio h3 {
+  text-align: center;
+}
+
+.precio-monto {
+  font-family: var(--serif-title);
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.precio-pwyw {
+  font-size: 1.1rem;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+}
+
+.precio-pwyw strong {
+  color: var(--accent-dark);
+}
+
+.precio-nota {
+  font-size: 0.92rem;
+  color: var(--text-soft);
+  font-style: italic;
+  max-width: 32em;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ============================================
+   AUTOR
+   ============================================ */
+
+.autor p {
+  font-size: 1.08rem;
+  line-height: 1.8;
+  color: var(--text);
+  text-align: justify;
+}
+
+/* ============================================
+   CTA FINAL
+   ============================================ */
+
+.cta-final {
+  text-align: center;
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-warm) 100%) !important;
+}
+
+.cta-final h3 {
+  text-align: center;
+}
+
+.cta-final p {
+  max-width: 30em;
+  margin: 0 auto 2rem;
+  color: var(--text);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+footer {
+  background: var(--text);
+  color: var(--bg-soft);
+  padding: 3rem 0 2rem;
+  text-align: center;
+}
+
+footer .nota-ia {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: #BFAE96;
+  max-width: 40em;
+  margin: 0 auto 1.5rem;
+  font-style: italic;
+}
+
+footer .copyright {
+  font-size: 0.8rem;
+  color: #8A7868;
+  letter-spacing: 0.05em;
+}
+
+/* ============================================
+   Accesibilidad — focus visible
+   ============================================ */
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
