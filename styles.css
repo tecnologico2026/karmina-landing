@@ -308,6 +308,53 @@ h3 {
 }
 
 /* ============================================
+   DEMO VIDEO
+   ============================================ */
+
+.demo {
+  text-align: center;
+}
+
+.demo h3 {
+  text-align: center;
+}
+
+.demo-intro {
+  color: var(--text-soft);
+  font-style: italic;
+  margin-bottom: 1.8rem;
+  max-width: 36em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.demo-intro em {
+  color: var(--accent-dark);
+}
+
+.demo video {
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow:
+    0 12px 32px rgba(45, 36, 25, 0.18),
+    0 4px 12px rgba(45, 36, 25, 0.10);
+  background: #000;
+}
+
+.demo-nota {
+  font-size: 0.88rem;
+  color: var(--text-soft);
+  font-style: italic;
+  margin-top: 1.5rem;
+  max-width: 32em;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* ============================================
    GALERIA
    ============================================ */
 
